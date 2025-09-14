@@ -162,7 +162,6 @@ class Passenger {
         auto it = find(ticket.begin(), ticket.end(), ti);
         if( it != ticket.end() ) {
             ticket.erase(it);
-            delete *it;
             veh->increasecapacity();
             cout << "Ticket cancel successfully" << endl ;
         }
@@ -232,4 +231,5 @@ int main () {
     
     p1.displaytk();
     p2.displaytk();
+
 }
